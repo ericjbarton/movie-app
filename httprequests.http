@@ -3,3 +3,7 @@ GET http://localhost:3000/movies.json
 
 ### Movies Show
 GET http://localhost:3000/movies/1.json
+
+### Actor Show
+
+GET http://localhost:3000/
