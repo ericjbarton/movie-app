@@ -7,3 +7,10 @@ GET http://localhost:3000/movies/1.json
 ### Actor Show
 
 GET http://localhost:3000/
+
+### Actor Index
+GET http://localhost:3000/actor.json 
+
+### Actor Destroy
+
+DELETE http://localhost:3000/actor/7

@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
   get "/movies" => "movies#index"
+  get "/actor" => "actor#index"
   get "/movies/:id" => "movies#show"
+  get "/actor/:id" => "actor#show"
   get "/movies/" => "movies#order"
-  get "/actors/" => "actors#actor_query"
+  get "/actor/" => "actor#actor_query"
   get "/actors/:wildcard" => "params#wildcard"
   post "bodyparams" => "params#bodyparams"
+  post "/movies" => "movies#create"
+  post "/actor" => "actor#create"
+  patch "/movies/:id" => "movies#update"
+  patch "/actor/:id" => "actor#update"
+  delete "movies/:id" => "movies#destroy"
+  delete "actor/:id" => "actor#destroy"
 end
