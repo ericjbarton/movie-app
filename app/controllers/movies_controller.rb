@@ -14,9 +14,14 @@ class MoviesController < ApplicationController
       title: params["title"],
       year: params["year"],
       plot: params["plot"],
+      director: params["director"],
+      english: params["english"]
     )
-    movie.save
+    if movie.save
     render json: movie.as_json
+  else
+    render json: { errors: movie.errors.full_messages } status: unprcessable_entity
+  end
   end
 
   def update
@@ -28,8 +33,11 @@ class MoviesController < ApplicationController
     movie.director = params["director"] || movie.director
     movie.english = params["english"] || movie.english
 
-    movie.save
+    if movie.save
     render json: movie.as_json
+    else
+      render json: { errors: movie.errors.full_messages } status: unprcessable_entity
+    end
   end
 
   def order
