@@ -14,3 +14,24 @@ GET http://localhost:3000/actor.json
 ### Actor Destroy
 
 DELETE http://localhost:3000/actor/7
+
+### Users create (signup)
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "Iowa Jones",
+  "email": "???.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "alligators&meth&mickey@example.com",
+  "password": "password"
+}

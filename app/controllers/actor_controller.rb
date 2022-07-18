@@ -1,4 +1,5 @@
 class ActorController < ApplicationController
+  before_action :authenticate_admin, except: [:index, :show]
   def one_actor
     actor = Actor.find_by(id: params["id"])
     render json: actor.as_json
